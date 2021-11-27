@@ -1,4 +1,5 @@
 import { Component, OnInit , OnChanges} from '@angular/core';
+import {MatSnackBar} from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { UsuarioService } from 'src/app/user.service';
 
@@ -10,8 +11,8 @@ import { UsuarioService } from 'src/app/user.service';
 export class ImovelComponent implements OnInit {
   imovel : any = {
     wifi: false,
-    tv: true,
-    cozinha:true,
+    tv: false,
+    cozinha:false,
     cpf: "xxx.xxx.xxx-xx",
     descricao: "",
     preco: 0.0,
@@ -19,7 +20,8 @@ export class ImovelComponent implements OnInit {
       uf: "UF",  
   } 
 
-  constructor(private router : Router, private service : UsuarioService) { }
+  constructor(private router : Router, private service : UsuarioService, 
+    private snackBar: MatSnackBar) { }
 
   OnChanges():void{
 
@@ -28,12 +30,14 @@ export class ImovelComponent implements OnInit {
   }
 
   postImovel(): void {
-    this.service.postImovel(this.imovel).subscribe( () =>{   
+    this.service.postImovel(this.imovel).subscribe( () =>{ 
+      this.service.showMessage("Cadastro Realizado Com Sucesso")  
       this.router.navigate([''])} )
 
   }
 
-  navFromIndex(){
+  navFromIndex(){ //apenas rota de teste será deletada
+    this.service.showMessage("Operação Cancelada!")
     this.router.navigate(['']);
   }
 
