@@ -8,17 +8,17 @@ import { HomeComponent } from './view/home/home.component';
 const routes: Routes = [
   {
     path: "",
-    component : HomeComponent 
+    component : HomeComponent
 
-  },  
+  },
   {
     path: "form/imovel",
-    component : ImovelComponent 
+    component : ImovelComponent
 
   },
   {
     path: "login",
-    component : LoginComponent 
+    component : LoginComponent
 
   }
 

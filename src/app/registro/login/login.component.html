@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
- 
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
@@ -17,28 +17,38 @@
                 <p class="description description-primary">Buscando pelos melhores preços?</p>
                 <p class="description description-primary">cadastre-se e saiba mais!</p>
                 <button id="signin" class="btn btn-primary">Login</button>
-            </div>    
+            </div>
             <div class="second-column">
                 <h2 class="title title-second">Criar uma conta</h2>
                 <p class="description description-second">Use seu e-mail para o cadastro:</p>
                 <form class="form">
                     <label class="label-input" for="">
                         <i class="far fa-user icon-modify"></i>
-                        <input type="text" placeholder="Name">
+                        <input type="text" [(ngModel)]="create.name" id="name" placeholder="Name">
                     </label>
-                    
+
                     <label class="label-input" for="">
                         <i class="far fa-envelope icon-modify"></i>
-                        <input type="email" placeholder="Email">
+                        <input type="email" [(ngModel)]="create.email" id="email" placeholder="Email">
                     </label>
-                    
+
                     <label class="label-input" for="">
                         <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder="Password">
+                        <input type="password" [(ngModel)]="create.password" id="password" placeholder="Password">
                     </label>
-                    
-                    
-                    <button class="btn btn-second">Cadastre-se</button>        
+
+                    <label class="label-input" for="">
+                      <i class="fas fa-phone icon-modify"></i>
+                      <input type="tel" [(ngModel)]="create.phone" id="phone" placeholder="Phone">
+                  </label>
+
+                  <label class="label-input" for="">
+                    <i class="fas fa-box icon-modify"></i>
+                    <input type="text" [(ngModel)]="create.cpf" id="cpf" placeholder="cpf">
+                </label>
+
+
+                    <button id="btn-submit" class="btn btn-second" (click)="postCreate()">Cadastre-se</button>
                 </form>
             </div>
         </div>
@@ -72,17 +82,17 @@
                 </div><!-- social media -->
                 <p class="description description-second">ou use seu e-mail:</p>
                 <form class="form">
-                
+
                     <label class="label-input" for="">
                         <i class="far fa-envelope icon-modify"></i>
                         <input type="email" placeholder="Email">
                     </label>
-                
+
                     <label class="label-input" for="">
                         <i class="fas fa-lock icon-modify"></i>
                         <input type="password" placeholder="Password">
                     </label>
-                
+
                     <a class="password" href="#">Esqueceu sua senha?</a>
                     <button class="btn btn-second">Login</button>
                 </form>

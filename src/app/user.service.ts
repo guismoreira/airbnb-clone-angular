@@ -1,19 +1,21 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import {MatSnackBar} from '@angular/material/snack-bar'; 
+import {MatSnackBar} from '@angular/material/snack-bar';
 @Injectable({
   providedIn: 'root'
 })
 export class UsuarioService {
 
-usuarioUrl = 'http://localhost:8080/api/v1/createUser'
+usuarioPostUrl = 'http://localhost:8080/api/v1/createUser'
+
+usuarioLoginUrl = 'http://localhost:8080/api/v1/loginUser'
 
 //mudar a rota para a rota de POST do back de inserção de imovel
-imovelPostUrl = 'http://localhost:8080/api/v1/createUser' 
+imovelPostUrl = 'http://localhost:8080/api/v1/createOffer'
 
 ////mudar a rota para a rota de GET do back para listar imoveis
-imovelGetUrl = 'http://localhost:8080/api/v1/createUser' 
+imovelGetUrl = 'http://localhost:8080/api/v1/listAllOffers'
 
 
   constructor(private http: HttpClient, private snackBar : MatSnackBar ) { }
@@ -34,8 +36,12 @@ imovelGetUrl = 'http://localhost:8080/api/v1/createUser'
     return this.http.get<any[]>(this.imovelGetUrl);
   }
 
-  listar() {
-    return this.http.get<any[]>(`${this.usuarioUrl}`);
+  postLogin(usuario : any ) : Observable<any>{
+    return this.http.post<any>(this.usuarioLoginUrl, usuario);
+  }
+
+  postCreate(usuario : any ) : Observable<any>{
+    return this.http.post<any>(this.usuarioPostUrl, usuario);
   }
 
 }
