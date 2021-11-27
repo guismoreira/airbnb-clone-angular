@@ -15,7 +15,7 @@ usuarioLoginUrl = 'http://localhost:8080/api/v1/loginUser'
 imovelPostUrl = 'http://localhost:8080/api/v1/createOffer'
 
 ////mudar a rota para a rota de GET do back para listar imoveis
-imovelGetUrl = 'http://localhost:8080/api/v1/listAllOffers'
+imovelGetUrl = 'http://localhost:8080/api/v1/listAllOffer'
 
 
   constructor(private http: HttpClient, private snackBar : MatSnackBar ) { }
