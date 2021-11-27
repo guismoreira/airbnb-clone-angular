@@ -10,24 +10,28 @@ import { UsuarioService } from 'src/app/user.service';
 export class HomeComponent implements OnInit {
 
   imoveis : any = [{
-    wifi: false,
-    tv: false,
-    cozinha:false,
+    isWifi: false,
+    isTV: false,
+    isKitchen:false,
     cpf: "xxx.xxx.xxx-xx",
-    descricao: "",
-    preco: 0.0,
-      rua: "Logradouro", 
-      uf: "UF",  
+    description: "",
+    available_dates: "",
+    price: 0.0,
+      street: "Logradouro",
+      uf: "UF",
+      city: "UF",
   },
   {
-    wifi: false,
-    tv: false,
-    cozinha:false,
+    isWifi: false,
+    isTV: false,
+    isKitchen:false,
     cpf: "xxx.xxx.xxx-xx",
-    descricao: "",
-    preco: 0.0,
-      rua: "Logradouro", 
-      uf: "UF",  
+    description: "",
+    available_dates: "",
+    price: 0.0,
+      street: "Logradouro",
+      uf: "UF",
+      city: "UF",
   } ]
 
 
@@ -35,14 +39,14 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 
-   // this.service.getImoveis().subscribe((imovel) =>(
-     // this.imoveis = imovel));
+   this.service.getImoveis().subscribe((imovel) =>(
+     this.imoveis = imovel));
 
   }
 navForFormImovel(){
   this.router.navigate(['form/imovel']);
 }
 
- 
+
 
 }

@@ -22,7 +22,7 @@
       </button>
     </div>
     <div class="header__nav">
-      <a (click)="navForFormImovel()" class="header__nav__button header__nav__button-greyHover" 
+      <a (click)="navForFormImovel()" class="header__nav__button header__nav__button-greyHover"
         >Seja um anfitrião</a
       >
       <button
@@ -52,10 +52,10 @@
         <span>
             conteúdo blá blá blá blá.</span>
       </div>
-      <div class="listings"> 
-        
-        
-      
+      <div class="listings">
+
+
+
         <div class="listings__item"  *ngFor="let imovel of imoveis" >
           <div class="listings__image listings__image-superHost" >
             <button>
@@ -69,8 +69,8 @@
           <div class="listings__content" *ngIf="imovel">
             <div class="listings__title">
               <div class="listings__icon__text">
-                <span class="greyText">Apzinho bonitinho</span>
-                <h2>blá blá blá blá blá blá blá blá blá</h2>
+                <span class="greyText">{{imovel.description}}</span>
+                <h2>{{imovel.description}}</h2>
               </div>
               <div class="listings__title__icon">
                 <button>
@@ -80,8 +80,8 @@
             </div>
             <div class="separator"></div>
             <div class="listings__description">
-              <span class="greyText">2 quartinhos · 1 banheirinho</span>
-              <span class="greyText">Cozinha · Wifi · Área de Lazer</span>
+              <span class="greyText">{{imovel.isWifi}}</span>
+              <span class="greyText">{{imovel.isKitchen}}</span>
             </div>
             <div class="listings__details">
               <div class="listings__rating">
@@ -90,10 +90,10 @@
               </div>
               <div class="listings__price">
                 <div class="listings__price__night">
-                 {{imoveis.preco}} <span> / noite</span>
+                 {{imoveis.price}} <span> / noite</span>
                 </div>
                 <div class="listings__price__total">
-                  <span>R$300 total</span>
+                  <span>{{imoveis.price}}</span>
                 </div>
               </div>
             </div>

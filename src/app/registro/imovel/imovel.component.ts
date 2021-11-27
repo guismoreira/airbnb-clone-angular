@@ -10,17 +10,19 @@ import { UsuarioService } from 'src/app/user.service';
 })
 export class ImovelComponent implements OnInit {
   imovel : any = {
-    wifi: false,
-    tv: false,
-    cozinha:false,
+    isWifi: false,
+    isTV: false,
+    isKitchen:false,
     cpf: "xxx.xxx.xxx-xx",
-    descricao: "",
-    preco: 0.0,
-      rua: "Logradouro", 
-      uf: "UF",  
-  } 
+    description: "",
+    available_dates: "",
+    price: 0.0,
+      street: "Logradouro",
+      uf: "UF",
+      city: "UF",
+  }
 
-  constructor(private router : Router, private service : UsuarioService, 
+  constructor(private router : Router, private service : UsuarioService,
     private snackBar: MatSnackBar) { }
 
   OnChanges():void{
@@ -30,8 +32,8 @@ export class ImovelComponent implements OnInit {
   }
 
   postImovel(): void {
-    this.service.postImovel(this.imovel).subscribe( () =>{ 
-      this.service.showMessage("Cadastro Realizado Com Sucesso")  
+    this.service.postImovel(this.imovel).subscribe( () =>{
+      this.service.showMessage("Cadastro Realizado Com Sucesso")
       this.router.navigate([''])} )
 
   }
