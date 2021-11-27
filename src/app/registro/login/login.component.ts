@@ -15,9 +15,9 @@ export class LoginComponent implements OnInit {
   }
 
   create : any = {
-    email : 'email',
-    password : 'password',
     name : 'name',
+    password : 'password',
+    email : 'email',
     cpf : 'cpf',
     phone : 'phone'
   }
