@@ -7,15 +7,13 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 })
 export class UsuarioService {
 
-usuarioPostUrl = 'http://localhost:8080/api/v1/createUser'
+usuarioPostUrl = 'https://airbnb-clone-spring.herokuapp.com/api/v1/createUser'
 
 usuarioLoginUrl = 'https://airbnb-clone-spring.herokuapp.com/api/v1/loginUser'
 
-//mudar a rota para a rota de POST do back de inserção de imovel
-imovelPostUrl = 'http://localhost:8080/api/v1/createOffer'
+imovelPostUrl = 'https://airbnb-clone-spring.herokuapp.com/api/v1/createOffer'
 
-////mudar a rota para a rota de GET do back para listar imoveis
-imovelGetUrl = 'http://localhost:8080/api/v1/listAllOffer'
+imovelGetUrl = 'https://airbnb-clone-spring.herokuapp.com/api/v1/listAllOffer'
 
 
   constructor(private http: HttpClient, private snackBar : MatSnackBar ) { }
