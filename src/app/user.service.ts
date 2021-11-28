@@ -9,7 +9,7 @@ export class UsuarioService {
 
 usuarioPostUrl = 'http://localhost:8080/api/v1/createUser'
 
-usuarioLoginUrl = 'http://localhost:8080/api/v1/loginUser'
+usuarioLoginUrl = 'https://airbnb-clone-spring.herokuapp.com/api/v1/loginUser'
 
 //mudar a rota para a rota de POST do back de inserção de imovel
 imovelPostUrl = 'http://localhost:8080/api/v1/createOffer'

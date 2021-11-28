@@ -20,19 +20,7 @@ export class HomeComponent implements OnInit {
       street: "Logradouro",
       uf: "UF",
       city: "UF",
-  },
-  {
-    isWifi: false,
-    isTV: false,
-    isKitchen:false,
-    cpf: "xxx.xxx.xxx-xx",
-    description: "",
-    available_dates: "",
-    price: 0.0,
-      street: "Logradouro",
-      uf: "UF",
-      city: "UF",
-  } ]
+  }]
 
 
   constructor(private service: UsuarioService ,private router : Router) { }
@@ -41,7 +29,6 @@ export class HomeComponent implements OnInit {
 
    this.service.getImoveis().subscribe((imovel) =>(
      this.imoveis = imovel));
-
   }
 navForFormImovel(){
   this.router.navigate(['form/imovel']);

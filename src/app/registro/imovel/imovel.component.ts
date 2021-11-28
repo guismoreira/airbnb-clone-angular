@@ -13,13 +13,14 @@ export class ImovelComponent implements OnInit {
     isWifi: false,
     isTV: false,
     isKitchen:false,
-    cpf: "xxx.xxx.xxx-xx",
+    numberOfBeds:0,
+    cpf: "",
     description: "",
     available_dates: "",
     price: 0.0,
-      street: "Logradouro",
-      uf: "UF",
-      city: "UF",
+      street: "",
+      uf: "",
+      city: "",
   }
 
   constructor(private router : Router, private service : UsuarioService,
