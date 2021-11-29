@@ -14,13 +14,9 @@ export class ImovelComponent implements OnInit {
     isTV: false,
     isKitchen:false,
     numberOfBeds:0,
-    cpf: "",
     description: "",
     available_dates: "",
     price: 0.0,
-      street: "",
-      uf: "",
-      city: "",
   }
 
   constructor(private router : Router, private service : UsuarioService,
