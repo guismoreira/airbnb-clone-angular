@@ -1,4 +1,4 @@
-import { Component, OnInit , OnChanges} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { UsuarioService } from 'src/app/user.service';
@@ -35,7 +35,7 @@ export class ImovelComponent implements OnInit {
 
   }
 
-  navFromIndex(){ //apenas rota de teste será deletada
+  cancel(){ //apenas rota de teste será deletada
     this.service.showMessage("Operação Cancelada!")
     this.router.navigate(['']);
   }
