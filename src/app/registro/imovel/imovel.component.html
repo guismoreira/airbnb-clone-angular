@@ -13,23 +13,23 @@
     <form id="register-form">
       <div class="full-box">
         <label for="description">Descrição:</label>
-        <input  type="text" [(ngModel)]="imovel.descricao" name="description" id="description" placeholder="Descrição">
+        <input  type="text" [(ngModel)]="imovel.description" name="description" id="description" placeholder="Descrição">
       </div>
       <div class="half-box spacing">
-        <input type="checkbox" [(ngModel)]="imovel.wifi" name="Wifi" id="isWifi">
+        <input type="checkbox" [(ngModel)]="imovel.isWifi" name="Wifi" id="isWifi">
         <label for="checkbox"  id="isWifi">Possuí Wi-Fi?</label>
       </div>
       <div class="half-box">
-        <input type="checkbox" [(ngModel)]="imovel.tv" name="TV" id="isTV">
+        <input type="checkbox" [(ngModel)]="imovel.isTV" name="TV" id="isTV">
         <label for="checkbox" id="isTV">Possui TV?</label>
       </div>
       <div class="half-box spacing">
-        <input type="checkbox" [(ngModel)]="imovel.cozinha" name="Kitchen" id="isKitchen">
+        <input type="checkbox" [(ngModel)]="imovel.isKitchen" name="Kitchen" id="isKitchen">
         <label for="isKitchen" id="isKitchen">Possui cozinha?</label>
       </div>
       <div class="half-box spacing">
         <label for="price">Preço:</label>
-        <input type="text" [(ngModel)]="imovel.preco" name="price" id="price" placeholder="Digite um valor">
+        <input type="text" [(ngModel)]="imovel.price" name="price" id="price" placeholder="Digite um valor">
       </div>
       <div class="full-box">
         <input id="btn-submit" type="submit" value="Registrar" (click)="postImovel()">
