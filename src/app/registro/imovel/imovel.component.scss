@@ -1,103 +1,21 @@
-* {
-    margin: 0;
+form{
+  display: flex;
+  flex-direction: column;
+
+
+  }
+
+  button{
+    margin: 10px;
+    width: 70px;
+
+  }
+
+  div{
+    width: 50%;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Helvetica, sans-serif;
-    color: #323232;
-    border: none;
-  }
-  
-  input, label {
-    display: block;
-    outline: none;
-    width: 100%;
-  }
-  
-  a {
-    color: #eecee0;
-  }
-  
-  body {
-    padding-top: 5vh;
-    background-color: antiquewhite;
-  }
-  
-  #main-container {
-    width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: rgb(245, 57, 129);
-    border-radius: 10px;
-    padding: 25px;
-  }
-  
-  #main-container h1 {
-    text-align: center;
-    margin-bottom: 25px;
-    font-size: 1.6rem;
-  }
-  
-  form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .full-box {
-    flex: 1 1 100%;
-    position: relative;
-  }
-  
-  .half-box {
-    flex: 1 1 45%;
-    position: relative;
-  }
-  
-  .spacing {
-    margin-right: 2.5%;
-  }
-  
-  label {
-    font-weight: bold;
-    font-size: .8rem;
-  }
-  
-  input {
-    border-bottom: 2px solid #323232;
-    padding: 10px;
-    font-size: .9rem;
-    margin-bottom: 40px;
-  }
-  
-  input:focus {
-    border-color: #fa9bd1;
-  }
-  
-  input[type="submit"] {
-    background-color: #fff;
-    color: rgb(0, 0, 0);
-    border: none;
-    border-radius: 20px;
-    height: 40px;
-    cursor: pointer;
-  }
-  
-  #agreement {
-    margin-right: 5px;
-  }
-  
-  #agreement, #agreement-label {
-    display: inline-block;
-    width: auto;
-  }
-  
-  .error-validation {
-    color: #ff1a1a;
-    position: absolute;
-    top: 57px;
-    font-size: 12px;
-  }
-  
-  .template {
-    display: none;
-  }
+    margin: 25%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+}

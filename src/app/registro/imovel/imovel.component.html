@@ -1,42 +1,64 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Formulário de registro Airbnb</title>
+<div>
+  <mat-card>
+    <mat-card-title>Cadastro De Imovel:</mat-card-title>
+    <form>
 
-</head>
-<body>
-  <div id="main-container">
-    <h1>Cadastro de hospedagem</h1>
-    <form id="register-form">
-      <div class="full-box">
-        <label for="description">Descrição:</label>
-        <input  type="text" [(ngModel)]="imovel.description" name="description" id="description" placeholder="Descrição">
-      </div>
-      <div class="half-box spacing">
-        <input type="checkbox" [(ngModel)]="imovel.isWifi" name="Wifi" id="isWifi">
-        <label for="checkbox"  id="isWifi">Possuí Wi-Fi?</label>
-      </div>
-      <div class="half-box">
-        <input type="checkbox" [(ngModel)]="imovel.isTV" name="TV" id="isTV">
-        <label for="checkbox" id="isTV">Possui TV?</label>
-      </div>
-      <div class="half-box spacing">
-        <input type="checkbox" [(ngModel)]="imovel.isKitchen" name="Kitchen" id="isKitchen">
-        <label for="isKitchen" id="isKitchen">Possui cozinha?</label>
-      </div>
-      <div class="half-box spacing">
-        <label for="price">Preço:</label>
-        <input type="text" [(ngModel)]="imovel.price" name="price" id="price" placeholder="Digite um valor">
-      </div>
-      <div class="full-box">
-        <input id="btn-submit" type="submit" value="Registrar" (click)="postImovel()">
-      </div>
-    </form>
-  </div>
-  <p class="error-validation template"></p>
-  <script src="js/scripts.js"></script>
-</body>
-</html>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Tem wifi?</mat-label>
+        <mat-select>
+          <mat-option [(ngModel)]="imovel.isWifi"  value="true">Sim</mat-option>
+          <mat-option [(ngModel)]="imovel.isWifi" value="false">Não</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Tem tv?</mat-label>
+        <mat-select>
+          <mat-option [(ngModel)]="imovel.isTV"  value="true">Sim</mat-option>
+          <mat-option [(ngModel)]="imovel.isTV" value="false">Não</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Tem cozinha?</mat-label>
+        <mat-select>
+          <mat-option [(ngModel)]="imovel.isKitchen"  value="true">Sim</mat-option>
+          <mat-option [(ngModel)]="imovel.isKitchen" value="false">Não</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+
+  <mat-form-field appearance="fill">
+    <mat-label>Descrição Detalhada</mat-label>
+    <textarea matInput required
+    [(ngModel)]="imovel.description"
+    ></textarea>
+  </mat-form-field>
+
+
+  <mat-form-field  floatLabel="always">
+    <mat-label>Valor da Diária</mat-label>
+    <input   [(ngModel)]="imovel.price" matInput  class="example-left-align" placeholder="0">
+    <span matPrefix>$&nbsp;</span>
+  </mat-form-field>
+
+
+
+</form>
+
+<button mat-raised-button color="primary" (click)="postImovel()"  color="primary">
+  Salvar
+</button>
+
+<button mat-raised-button color="primary"(click)="cancel()" >
+Cancelar
+</button>
+
+</mat-card>
+
+
+</div>
+
+
+
